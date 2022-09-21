@@ -23,7 +23,8 @@
 		"github-cli": "latest",
 		"sshd": "latest",
 		"python": "latest",
-		"powershell": "latest"
+		"powershell": "latest",
+		"desktop-lite": "latest"
 	},
 	"customizations": {
 		"vscode": {
