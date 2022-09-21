@@ -1,4 +1,4 @@
-import requests  # imports module requests that helps in getting real time data from online
+codecsv import requests  # imports module requests that helps in getting real time data from online
 from tabulate import tabulate  # imports module tabulate thats allows the output to be formatted into proper tables 
 import mysql.connector as m 
 
