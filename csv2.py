@@ -2,6 +2,7 @@
 import csv
 import sys
 
+
 def write():
     def em_in():
         while True:
@@ -24,7 +25,9 @@ def write():
 def read():
     file = open("employee.csv", "r")
     r = csv.reader(file)
-    for i in r: print(i)
+    for i in r:
+        print(i)
+
 
 while True:
     print("""
