@@ -2,6 +2,7 @@
 import csv
 import sys
 
+
 def write():
     rec = []
     while True:
@@ -24,12 +25,14 @@ def write():
 def read():
     file = open("employee.csv", "r")
     r = csv.reader(file)
-    for i in r: print(i)
+    for i in r:
+        print(i)
 
 
 def clear():
     file = open("employee.csv", "w")
     file.close()
+
 
 while True:
     print("""
