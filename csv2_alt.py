@@ -15,7 +15,7 @@ def write():
         if c.lower() != 'y':
             break
 
-    file = open("employee.csv", "a")
+    file = open("employee.csv", "w")
     w = csv.writer(file)
     w.writerow(["Employee ID", "Employee Name", "Employee Salary", "Employee Department"])
     w.writerows(rec)
