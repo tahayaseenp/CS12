@@ -1,10 +1,10 @@
 # Write a program to accept the input of employees from the user and store it in a CSV file and retrieve it to display to the user
 import csv
 import sys
+rec=[]
 
 
 def write():
-    rec = []
     while True:
         emno = int(input("Enter employee ID: "))
         name = input("Enter employee name: ")
@@ -39,6 +39,8 @@ while True:
 1. Write data to CSV file
 2. Read data from CSV file
 3. Clear CSV file
+4. Print sorted data from CSV file (Sorted by Employee ID)
+5. Find sum of salaries of all employees
 0. Exit
     """)
 
@@ -52,6 +54,13 @@ while True:
     
     elif ch == 3:
         clear()
+
+    elif ch == 4:
+        rec.sort()
+        print(rec for i in rec)
+
+    elif ch == 5:
+        print(sum([i[2] for i in rec]))
 
     elif ch == 0:
         sys.exit("Thank You!")
