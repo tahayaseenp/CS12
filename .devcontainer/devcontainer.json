@@ -31,7 +31,8 @@
 				"GitHub.copilot",
 				"ms-python.vscode-pylance",
 				"ms-python.python",
-				"ms-vscode-remote.remote-containers"
+				"ms-vscode-remote.remote-containers",
+				"mtxr.sqltools"
 			]
 		}
 	}
