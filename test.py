@@ -12,3 +12,5 @@ print(Total(4))
 #print(Total(7))
 
 #print(Total())
+
+print("new edit")
