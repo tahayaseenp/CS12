@@ -132,5 +132,3 @@ def copyalternate():
     for i in range(0, len(c), 2):
         f.write(c[i])
     f.close()
-
-remove_duplicate()
