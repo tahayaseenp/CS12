@@ -133,3 +133,4 @@ def copyalternate():
         f.write(c[i])
     f.close()
 
+remove_duplicate()
