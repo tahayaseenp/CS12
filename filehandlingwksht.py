@@ -1,7 +1,10 @@
 def replace():
-    f = open("story.txt", "w+")
+    f = open("story.txt", "r")
     c = f.read()
+    f.close()
+
     c = c.replace("the", "them")
+    f = open("story.txt", "w")
     f.write(c)
     f.close()
 
@@ -9,9 +12,12 @@ def replace():
 def replace_user():
     a = input("Enter a word to replace: ")
     b = input("Enter a word to replace it with: ")
-    f = open("poem.txt", "w+")
+    f = open("poem.txt", "r")
     c = f.read()
+    f.close()
+    
     c = c.replace(a, b)
+    f = open("poem.txt", "w")
     f.write(c)
     f.close()
 
