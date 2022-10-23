@@ -15,6 +15,7 @@ def replace_user():
     f = open("poem.txt", "r")
     c = f.read()
     f.close()
+    
     c = c.replace(a, b)
     f = open("poem.txt", "w")
     f.write(c)
