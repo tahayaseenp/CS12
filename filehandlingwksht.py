@@ -112,14 +112,22 @@ def startm():
             count += 1
     print(count)
 
-def readlineonly():
+def readl():
+    f=open("div.txt",'r')
+    str=''
     while True:
-        try:
-            f = open("div.txt", "r")
-            m = ""
-            m += f.readline()
-        except:
+        str=f.readline()
+        print(str,end='')
+    f.close()
+
+def readlineonly():
+    f = open("div.txt", "r")
+    m = ""
+    while True:
+        m += f.readline()
+        if f.readline() == "":
             break
+    f.close()
     
 readlineonly()
 
