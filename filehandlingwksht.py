@@ -257,3 +257,59 @@ def delete(Room_No):
     pickle.dump(c, f)
     f.close()
     print("Deleted")
+
+
+def disp75():
+    f = open("student.dat", "rb")
+    c = pickle.load(f)
+    f.close()
+    for i in c:
+        if i[3] > 75:
+            print(i)
+
+
+def dispname():
+    n = input("Enter name to search: ")
+    f = open("student.dat", "rb")
+    c = pickle.load(f)
+    f.close()
+    for i in c:
+        if i[1] == n:
+            print(i)
+
+
+def rem():
+    f = open("student.dat", "rb")
+    c = pickle.load(f)
+    f.close()
+    for i in c:
+        if i[3] < 30:
+            c.remove(i)
+    f = open("student.dat", "wb")
+    pickle.dump(c, f)
+    f.close()
+
+
+def COUNTLINES():
+    f = open("TESTFILE.txt", "r")
+    c = f.readlines()
+    n = 0
+    f.close()
+    for i in c:
+        if i[0].lower() not in 'aeiou':
+            n += 1
+    print('The number of lines not starting with any vowel -', n)
+    
+
+def ETCount():
+    f = open("TESTFILE.txt", "r")
+    ec = tc = 0
+    c = f.read()
+    f.close()
+    for i in c:
+        if i.lower() == 'e':
+            ec += 1
+        elif i.lower() == 't':
+            tc += 1
+    print("E or e:", ec)
+    print("T or t:", tc)
