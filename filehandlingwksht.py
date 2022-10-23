@@ -113,10 +113,16 @@ def startm():
     print(count)
 
 def readlineonly():
-    f = open("div.txt", "r")
-    m = ""
-    m += f.readline()
+    while True:
+        try:
+            f = open("div.txt", "r")
+            m = ""
+            m += f.readline()
+        except:
+            break
     
+readlineonly()
+
 def copy():
     f = open("story.txt", "r")
     c = f.read()
