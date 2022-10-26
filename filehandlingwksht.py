@@ -39,7 +39,7 @@ def remove_duplicate():
     c = f.readlines()
     f.close()
     c = list(dict.fromkeys(c))
-    f = open("story.txt", "w")
+    f = open("hello.txt", "w")
     f.writelines(c)
     f.close()
 
