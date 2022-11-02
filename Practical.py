@@ -31,37 +31,9 @@ def view():
         print("%10s"%row[0],"%20s"%row[1],"%10s"%row[2],"%15s"%row[3])
 
 
-def update():
-    while True:
-        id = int(input("Enter ID: "))
-        name = input("Enter name: ")
-        salary = int(input("Enter salary: "))
-        department = input("Enter department: ")
-        db.execute("UPDATE employee SET name=%s, salary=%s, department=%s WHERE id=%s", (name, salary, department, id))
-        cdb.commit()
-        print("Employee data updated successfully\n")
-        ch = input("Would you like to continue? (y/n) : ")
-        if ch.lower() != 'y':
-            break
-        else:
-            continue
-
-
-def delete():
-    while True:
-        id = int(input("Enter ID: "))
-        db.execute("DELETE FROM employee WHERE id=%s", (id,))
-        cdb.commit()
-        print("Employee deleted successfully\n")
-        ch = input("Would you like to continue? (y/n) : ")
-        if ch.lower() != 'y':
-            break
-        else:
-            continue
-
 while True:
     print("MENU")
-    print("1. Add\n2. View\n3. Update\n4. Delete\n5. Exit")
+    print("1. Add\n2. View\n3. Exit")
 
     c = int(input("Enter your choice: "))
     if c == 1:
@@ -69,10 +41,6 @@ while True:
     elif c == 2:
         view()
     elif c == 3:
-        update()
-    elif c == 4:
-        delete()
-    elif c == 5:
         exit()
     else:
         print("Invalid choice")
