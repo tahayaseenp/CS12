@@ -1,0 +1,77 @@
+mysql> CREATE TABLE flight (FLCODE CHAR(5) PRIMARY KEY, START VARCHAR(50), DESTINATION VARCHAR(50), NO_STOPS INT(2), NO_FLIGHTS INT(2));
+Query OK, 0 rows affected (0.40 sec)
+
+mysql> INSERT INTO flight VALUES('IC101', 'DELHI', 'AGARTALA', 1, 5);
+Query OK, 1 row affected (0.05 sec)
+
+mysql> INSERT INTO flight VALUES('IC102', 'MUMBAI', 'SIKKIM', 1, 3);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO flight VALUES('IC103', 'DELHI', 'JAIPUR', 0, 7);
+Query OK, 1 row affected (0.13 sec)
+
+mysql> INSERT INTO flight VALUES('IC105', 'KANPUR', 'CHENNAI', 2, 2);
+Query OK, 1 row affected (0.06 sec)
+
+mysql> INSERT INTO flight VALUES('IC107', 'MUMBAI', 'KANPUR', 0, 4);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> INSERT INTO flight VALUES('IC431', 'INDORE', 'CHENNAI', 3, 2);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> INSERT INTO flight VALUES('IC121', 'DELHI', 'AHMEDABAD', 2, 6);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> SELECT * FROM FLIGHT WHERE START='Delhi';
++--------+-------+-------------+----------+------------+
+| FLCODE | START | DESTINATION | NO_STOPS | NO_FLIGHTS |
++--------+-------+-------------+----------+------------+
+| IC101  | DELHI | AGARTALA    |        1 |          5 |
+| IC103  | DELHI | JAIPUR      |        0 |          7 |
+| IC121  | DELHI | AHMEDABAD   |        2 |          6 |
++--------+-------+-------------+----------+------------+
+3 rows in set (0.02 sec)
+
+mysql> SELECT * FROM FLIGHT WHERE NO_FLIGHTS>4;
++--------+-------+-------------+----------+------------+
+| FLCODE | START | DESTINATION | NO_STOPS | NO_FLIGHTS |
++--------+-------+-------------+----------+------------+
+| IC101  | DELHI | AGARTALA    |        1 |          5 |
+| IC103  | DELHI | JAIPUR      |        0 |          7 |
+| IC121  | DELHI | AHMEDABAD   |        2 |          6 |
++--------+-------+-------------+----------+------------+
+3 rows in set (0.01 sec)
+
+mysql> SELECT FLCODE, START, DESTINATION, NO_FLIGHTS FROM FLIGHT ORDER BY NO_FLIGHTS DESC;
++--------+--------+-------------+------------+
+| FLCODE | START  | DESTINATION | NO_FLIGHTS |
++--------+--------+-------------+------------+
+| IC103  | DELHI  | JAIPUR      |          7 |
+| IC121  | DELHI  | AHMEDABAD   |          6 |
+| IC101  | DELHI  | AGARTALA    |          5 |
+| IC107  | MUMBAI | KANPUR      |          4 |
+| IC102  | MUMBAI | SIKKIM      |          3 |
+| IC105  | KANPUR | CHENNAI     |          2 |
+| IC431  | INDORE | CHENNAI     |          2 |
++--------+--------+-------------+------------+
+7 rows in set (0.03 sec)
+
+mysql> SELECT DESTINATION, FLCODE FROM FLIGHT WHERE DESTINATION LIKE "A%";
++-------------+--------+
+| DESTINATION | FLCODE |
++-------------+--------+
+| AGARTALA    | IC101  |
+| AHMEDABAD   | IC121  |
++-------------+--------+
+2 rows in set (0.01 sec)
+
+mysql> SELECT DISTINCT(NO_STOPS) FROM FLIGHT;
++----------+
+| NO_STOPS |
++----------+
+|        1 |
+|        0 |
+|        2 |
+|        3 |
++----------+
+4 rows in set (0.05 sec)
