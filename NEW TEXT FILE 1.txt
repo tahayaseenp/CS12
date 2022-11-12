@@ -1,3 +1,0 @@
-My first file using
-text file handling
-Now refresh
