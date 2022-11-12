@@ -33,14 +33,3 @@ def Pop_element():
 
     else:
         print("Stack Empty")
-
-
-def COUNTLINES():
-    fobj = open("TESTFILE.txt", "r")
-    c = fobj.readlines()
-    fobj.close()
-    count = 0
-    for i in c:
-        if i[0].lower() not in 'aeiou':
-            count += 1
-    print("The number of lines not starting with any vowel -", count)
