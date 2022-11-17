@@ -26,9 +26,7 @@ def search():
     idno = input("Enter Employee ID: ")
     for row in reader:
         if idno == row[0]:
-            print("Employee ID: ", row[0])
-            print("Employee Name: ", row[1])
-            print("Employee Salary: ", row[2])
+            print("Employee ID: ", row[0], "\nEmployee Name: ", row[1], "\nEmployee Salary: ", row[2])
             break
     f.close()
 
