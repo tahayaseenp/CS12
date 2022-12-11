@@ -25,16 +25,6 @@
 		"python": "latest",
 		"powershell": "latest"
 	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"GitHub.copilot",
-				"ms-python.vscode-pylance",
-				"ms-python.python",
-				"ms-vscode-remote.remote-containers",
-				"mtxr.sqltools"
-			]
-		}
 	}
 	
 }
