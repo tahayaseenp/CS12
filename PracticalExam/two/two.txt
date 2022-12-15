@@ -1,0 +1,4 @@
+mysql.connector
+mycon.cursor()
+SELECT * FROM Employee WHERE Age < 30;
+mycursor.fetchall()

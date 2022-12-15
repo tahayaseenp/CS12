@@ -3,7 +3,7 @@
 
 import os
 import sys
-os.system("cls")  # Clear the whole terminal before starting app
+os.system("clear")  # Clear the whole terminal before starting app
 
 print("""
 ███    ██ ███████ ████████ ███████ ██      ██ ██   ██
@@ -342,7 +342,7 @@ def register_customer():  # Register a new customer
     cdb.commit()
     db.execute("INSERT INTO auth VALUES(%s, %s)", (username, passhash))
     cdb.commit()
-    os.system("cls")  # Clear the terminal window to remove any personal data
+    os.system("clear")  # Clear the terminal window to remove any personal data
     print("You have successfully registered! Please run the program again and login!")
     sys.exit(0)  # Tells the system that the program exited successfully
 
@@ -720,7 +720,7 @@ def login():  # Log in the user
 
             if i[0] == login_username and c == True:
                 login_status = True  # Set login status to True
-                os.system('cls')  # Clear terminal to remove personal information
+                os.system('clear')  # Clear terminal to remove personal information
                 print("Login successful!")
                 print("Hello,", login_username + "!" "\n")
                 return login_status

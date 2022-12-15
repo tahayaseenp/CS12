@@ -1,0 +1,14 @@
+CREATE DATABASE exam;
+USE exam;
+CREATE TABLE Games
+(
+    GCode INT PRIMARY KEY NOT NULL,
+    GameName VARCHAR(255) NOT NULL,
+    PrizeMoney INT NOT NULL
+);
+
+INSERT INTO Games VALUES (101, 'CaromBoard', 5000);
+INSERT INTO Games VALUES (102, 'Badminton', 12000);
+INSERT INTO Games VALUES (103, 'TableTennis', 8000);
+INSERT INTO Games VALUES (104, 'Chess', 9000);
+INSERT INTO Games VALUES (105, 'LawnTennis', 25000);

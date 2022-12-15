@@ -1,0 +1,4 @@
+host='localhost', user='root', password='1234', database='exam'
+cursor()
+ALTER TABLE Games ADD No_of_participants INT NOT NULL;
+commit()

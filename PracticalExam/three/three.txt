@@ -1,0 +1,4 @@
+host='localhost', user='root', password='root', database='exam'
+SELECT StuID, Name FROM student WHERE Class LIKE "11%";
+cursor.fetchall()
+mycon.close()

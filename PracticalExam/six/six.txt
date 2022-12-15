@@ -1,0 +1,4 @@
+mysql.connector
+mycon.cursor()
+SELECT * FROM Stationery WHERE Price > 10;
+cursor.fetchall()

@@ -1,0 +1,4 @@
+host='localhost', user='root', password='1234', database='exam'
+cursor()
+UPDATE Customer SET City='Chennai' WHERE CustomerID = 134
+commit()
