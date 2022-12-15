@@ -1,6 +1,3 @@
-# Write a menu driven python program with separate user defined functions to perform the following operations into a binary file “Mobile.dat”
-# The structure of the file content is [Model, Company, Price]
-
 import pickle
 L = []
 

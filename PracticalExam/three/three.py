@@ -1,6 +1,3 @@
-# Write a menu driven python program with separate user defined functions to perform the following operations into a CSV file Voters.csv
-# The structure of the file content is [VoterID, Votername, Age]
-
 import csv
 L = []
 

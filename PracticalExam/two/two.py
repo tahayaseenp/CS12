@@ -1,5 +1,3 @@
-# Write a menu driven python program with separate user defined functions to perform the following operations into a text file ‘story.txt’
-
 def create():
     f = open('story.txt', 'w')
     c = 'Whose woods these are I think I know\nHis house is in the village though\nHe will not see me stopping here\nTo watch his woods, fill up with snow'
